@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="docs/style.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <header class="text-center mb-4">
+            <h1><i class="bi bi-check2-square"></i> ToDo App</h1>
+        </header>
+
+        <!-- Navigation -->
+        <ul class="nav nav-tabs" id="main-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tasks-tab-button" data-bs-toggle="tab" data-bs-target="#tasks-tab-pane" type="button" role="tab" aria-controls="tasks-tab-pane" aria-selected="true"><i class="bi bi-list-task"></i> Aufgaben</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="projects-tab-button" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false"><i class="bi bi-folder"></i> Projekte</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="priorities-tab-button" data-bs-toggle="tab" data-bs-target="#priorities-tab-pane" type="button" role="tab" aria-controls="priorities-tab-pane" aria-selected="false"><i class="bi bi-flag"></i> Prioritäten</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Tasks Tab -->
+            <div class="tab-pane fade show active" id="tasks-tab-pane" role="tabpanel" aria-labelledby="tasks-tab-button" tabindex="0">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Neue Aufgabe</h5>
+                        <form id="form-add-task">
+                            <div class="mb-3">
+                                <label for="task-title" class="form-label">Titel</label>
+                                <input type="text" class="form-control" id="task-title" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="task-due-date" class="form-label">Fälligkeitsdatum</label>
+                                    <input type="date" class="form-control" id="task-due-date">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="task-priority" class="form-label">Priorität</label>
+                                    <select id="task-priority" class="form-select"></select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="task-project" class="form-label">Projekt</label>
+                                    <select id="task-project" class="form-select"></select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Aufgabe hinzufügen</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Aufgabenliste</h5>
+                        <div class="row mb-3 g-3">
+                            <div class="col-md-4">
+                                <label for="filter-project" class="form-label">Projekt filtern</label>
+                                <select id="filter-project" class="form-select">
+                                    <option value="all">Alle Projekte</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="filter-priority" class="form-label">Priorität filtern</label>
+                                <select id="filter-priority" class="form-select">
+                                    <option value="all">Alle Prioritäten</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="sort-tasks" class="form-label">Sortieren nach</label>
+                                <select id="sort-tasks" class="form-select">
+                                    <option value="due-date-asc">Fälligkeit (aufsteigend)</option>
+                                    <option value="due-date-desc">Fälligkeit (absteigend)</option>
+                                    <option value="priority-asc">Priorität (aufsteigend)</option>
+                                    <option value="priority-desc">Priorität (absteigend)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="list-group" id="task-list">
+                            <!-- Tasks will be injected here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Tab -->
+            <div class="tab-pane fade" id="projects-tab-pane" role="tabpanel" aria-labelledby="projects-tab-button" tabindex="0">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Neues Projekt</h5>
+                        <form id="form-add-project">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="project-name" placeholder="Projektname" required>
+                                <button class="btn btn-primary" type="submit"><i class="bi bi-plus-lg"></i> Projekt hinzufügen</button>
+                            </div>
+                        </form>
+                        <ul class="list-group mt-3" id="project-list">
+                            <!-- Projects will be injected here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Priorities Tab -->
+            <div class="tab-pane fade" id="priorities-tab-pane" role="tabpanel" aria-labelledby="priorities-tab-button" tabindex="0">
+                 <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Neue Priorität</h5>
+                        <form id="form-add-priority">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="priority-name" placeholder="Prioritätsname" required>
+                                <button class="btn btn-primary" type="submit"><i class="bi bi-plus-lg"></i> Priorität hinzufügen</button>
+                            </div>
+                        </form>
+                        <ul class="list-group mt-3" id="priority-list">
+                            <!-- Priorities will be injected here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTaskModalLabel">Aufgabe bearbeiten</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-edit-task">
+                        <input type="hidden" id="edit-task-id">
+                        <div class="mb-3">
+                            <label for="edit-task-title" class="form-label">Titel</label>
+                            <input type="text" class="form-control" id="edit-task-title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-task-due-date" class="form-label">Fälligkeitsdatum</label>
+                            <input type="date" class="form-control" id="edit-task-due-date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-task-priority" class="form-label">Priorität</label>
+                            <select id="edit-task-priority" class="form-select"></select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-task-project" class="form-label">Projekt</label>
+                            <select id="edit-task-project" class="form-select"></select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                    <button type="button" class="btn btn-primary" id="btn-save-task-changes">Änderungen speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Generic Item Modal (for Projects and Priorities) -->
+    <div class="modal fade" id="editItemModal" tabindex="-1" aria-labelledby="editItemModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editItemModalLabel">Element bearbeiten</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-edit-item">
+                        <input type="hidden" id="edit-item-id">
+                        <input type="hidden" id="edit-item-type">
+                        <div class="mb-3">
+                            <label for="edit-item-name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="edit-item-name" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                    <button type="button" class="btn btn-primary" id="btn-save-item-changes">Änderungen speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="docs/app.js"></script>
+</body>
+</html>
