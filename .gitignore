@@ -1,0 +1,11 @@
+./node_modules
+./server/*
+./client/*
+# Ignore build output
+/dist
+# Ignore environment files
+.env
+# Ignore logs
+*.log
+server/node_modules/*
+client/node_modules/*

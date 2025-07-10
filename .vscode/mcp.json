@@ -1,0 +1,12 @@
+{
+    "servers": {
+        "sqlite": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${input:db_path}"
+            ]
+        }
+    }
+}
