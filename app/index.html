@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container py-4">
+        <h1 class="mb-4">ToDo App</h1>
+
+        <ul class="nav nav-tabs mb-3" id="mainTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tasks-tab" data-bs-toggle="tab" data-bs-target="#tasks" type="button" role="tab">Aufgaben</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab">Projekte</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="priorities-tab" data-bs-toggle="tab" data-bs-target="#priorities" type="button" role="tab">Prioritäten</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="mainTabsContent">
+            <div class="tab-pane fade show active" id="tasks" role="tabpanel" aria-labelledby="tasks-tab">
+                <div class="mb-3 d-flex flex-wrap gap-2">
+                    <select id="filterProject" class="form-select w-auto">
+                        <option value="">Projekt</option>
+                    </select>
+                    <select id="filterPriority" class="form-select w-auto">
+                        <option value="">Priorität</option>
+                    </select>
+                    <select id="sort" class="form-select w-auto">
+                        <option value="">Sortieren</option>
+                        <option value="dueDateAsc">Fällig (aufsteigend)</option>
+                        <option value="dueDateDesc">Fällig (absteigend)</option>
+                        <option value="priorityAsc">Priorität (aufsteigend)</option>
+                        <option value="priorityDesc">Priorität (absteigend)</option>
+                    </select>
+                    <button class="btn btn-primary" id="newTaskBtn">Neue Aufgabe</button>
+                </div>
+                <ul class="list-group" id="taskList"></ul>
+            </div>
+            <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+                <div class="mb-3">
+                    <button class="btn btn-primary" id="newProjectBtn">Neues Projekt</button>
+                </div>
+                <ul class="list-group" id="projectList"></ul>
+            </div>
+            <div class="tab-pane fade" id="priorities" role="tabpanel" aria-labelledby="priorities-tab">
+                <div class="mb-3">
+                    <button class="btn btn-primary" id="newPriorityBtn">Neue Priorität</button>
+                </div>
+                <ul class="list-group" id="priorityList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="itemModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="itemModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="itemForm">
+                        <div id="taskFields" class="d-none">
+                            <div class="mb-3">
+                                <label for="taskTitle" class="form-label">Titel</label>
+                                <input type="text" class="form-control" id="taskTitle" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="taskDueDate" class="form-label">Fälligkeitsdatum</label>
+                                <input type="date" class="form-control" id="taskDueDate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="taskPriority" class="form-label">Priorität</label>
+                                <select id="taskPriority" class="form-select"></select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="taskProject" class="form-label">Projekt</label>
+                                <select id="taskProject" class="form-select"></select>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="taskDone">
+                                <label class="form-check-label" for="taskDone">Erledigt</label>
+                            </div>
+                        </div>
+                        <div id="nameField" class="mb-3 d-none">
+                            <label for="itemName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="itemName" required>
+                        </div>
+                        <input type="hidden" id="itemId">
+                        <input type="hidden" id="itemType">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                    <button type="submit" form="itemForm" class="btn btn-primary" id="saveBtn">Speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
