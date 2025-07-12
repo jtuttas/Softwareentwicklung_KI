@@ -40,7 +40,7 @@ class:
 - ChatGPT im Canvas Mode
 - v0.dev - Rapid Prototyping
 - Github CoPilot - Autocompletion
-- Agenten (github Copilot, Gemini)
+- Agenten (github Copilot, Codex, Gemini)
 - MCP - Model Context Protocol
 
 ---
@@ -59,7 +59,6 @@ class:
 
 ![bg left:33% ](abschluss.png)
 
-- Veränderungen in der Softwareentwicklung durch KI
 - Diskussion, Feedback und offene Fragen
 - Ausblick auf zukünftige Entwicklungen in der KI-unterstützten Softwareentwicklung
 - Welche Kompetenzen sind in Zukunft wichtig?
@@ -110,5 +109,17 @@ Inkl. Deployment auf Vercel
 - Programmieren über Kommentare
 - Commit Nachrichten generieren
 
-<!-- footer: 2023 / 2024 -->
+<!-- footer: 2022 - 2024 -->
+
+---
+
+![bg blur:6px opacity](pic1.png)
+
+# Agenten
+
+- Codex (OpenAI)
+- github Copilot (Microsoft)
+- Gemini (Google)
+
+<!-- footer: 2025 -->
 
