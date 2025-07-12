@@ -44,3 +44,15 @@ cd <repository-verzeichnis>
 ├── Pflichtenheft-Bootstap.md # Technische Spezifikationen für die Umsetzung
 └── README.md               # Diese Datei
 ```
+
+## Präsentation starten
+
+Im Verzeichnis `docs` befindet sich eine kurze Präsentation zum Projekt.
+Um die Folien lokal im Browser anzuzeigen, kann [Marp](https://marp.app/) verwendet werden:
+
+```bash
+cd docs
+marp . --server --allow-local-files --html
+```
+
+Durch diesen Befehl wird ein lokaler Webserver gestartet, der die Präsentation automatisch öffnet.
