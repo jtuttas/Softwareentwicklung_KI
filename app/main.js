@@ -118,14 +118,12 @@
     function openModal(type, id){
         $('#itemForm')[0].reset();
         $('#taskFields, #nameField').addClass('d-none');
-        // ensure required attributes are set only for the visible fields
-        $('#taskTitle').prop('required', false);
-        $('#itemName').prop('required', false);
+
         $('#itemId').val(id || '');
         $('#itemType').val(type);
         if(type==='task'){
             $('#taskFields').removeClass('d-none');
-            $('#taskTitle').prop('required', true);
+
             if(id){
                 const t = tasks.find(t=>t.id===id);
                 $('#taskTitle').val(t.title);
@@ -137,7 +135,7 @@
             $('#itemModalLabel').text(id ? 'Aufgabe bearbeiten' : 'Neue Aufgabe');
         } else {
             $('#nameField').removeClass('d-none');
-            $('#itemName').prop('required', true);
+
             let item;
             if(type==='project') item = projects.find(p=>p.id===id);
             if(type==='priority') item = priorities.find(p=>p.id===id);
