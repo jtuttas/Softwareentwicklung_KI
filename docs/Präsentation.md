@@ -123,3 +123,51 @@ Inkl. Deployment auf Vercel
 
 <!-- footer: 2025 -->
 
+---
+
+![bg blur:6px opacity](pic1.png)
+
+## Codex der Agent in der Cloud
+
+![codex](codex.png)
+
+<!-- footer: 2025 -->
+
+---
+
+![bg blur:6px opacity](pic1.png)
+
+## CoPilot im Agent Mode
+
+![copilot](copilot.png)
+
+<!-- footer: 2025 -->
+---
+
+![bg blur:6px opacity](pic1.png)
+
+## Gemini CLI der Agent im Terminal
+
+![gemini](gemini.png)
+
+<!-- footer: 2025 -->
+
+---
+
+![bg blur:6px opacity](pic1.png)
+
+## MCP - Model Context Protocol
+
+> Die KI Agenten bekommen Werkzeuge
+
+<!-- footer: 2025 -->
+
+---
+
+# Evaluation
+
+![bg right:33% ](abschluss.png)
+
+![meni](menti.png)
+
+<!-- footer: Bitte nehmen Sie an der Umfrage teil -->
