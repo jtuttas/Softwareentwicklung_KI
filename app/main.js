@@ -118,10 +118,12 @@
     function openModal(type, id){
         $('#itemForm')[0].reset();
         $('#taskFields, #nameField').addClass('d-none');
+
         $('#itemId').val(id || '');
         $('#itemType').val(type);
         if(type==='task'){
             $('#taskFields').removeClass('d-none');
+
             if(id){
                 const t = tasks.find(t=>t.id===id);
                 $('#taskTitle').val(t.title);
@@ -133,6 +135,7 @@
             $('#itemModalLabel').text(id ? 'Aufgabe bearbeiten' : 'Neue Aufgabe');
         } else {
             $('#nameField').removeClass('d-none');
+
             let item;
             if(type==='project') item = projects.find(p=>p.id===id);
             if(type==='priority') item = priorities.find(p=>p.id===id);
