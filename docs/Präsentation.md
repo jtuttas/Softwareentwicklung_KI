@@ -160,6 +160,15 @@ Inkl. Deployment auf Vercel
 
 > Die KI Agenten bekommen Werkzeuge
 
+<!-- footer: Nov. 2024 -->
+---
+
+![bg blur:6px opacity](pic1.png)
+
+## MCP Server Datenbank
+
+![mcpso](mcpso.png)
+
 <!-- footer: 2025 -->
 
 ---
