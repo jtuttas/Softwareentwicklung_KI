@@ -7,6 +7,11 @@ Endpunkte für:
 - Projekte (CRUD)
 - Prioritäten (CRUD)
 
+Die Authentifizierung der Benutzer erfolgt über ein Login-System. 
+
+Die Benutzer haben unterschiedliche Rollen (Mitarbeiter, Abteilungsleiter, Administrator) und damit unterschiedliche Berechtigungen.
+
+
 ## Server (node.js)
 
 server/
@@ -24,7 +29,7 @@ server/
 
 Der Server soll auf Port 3000 laufen und die folgenden Endpunkte bereitstellen:
 
-## Endpunkte
+### Endpunkte
 
 - `GET /` - Basis-Route (z.B. "API läuft")
 - `GET /tasks` - Alle Aufgaben abrufen
@@ -43,12 +48,14 @@ Der Server soll auf Port 3000 laufen und die folgenden Endpunkte bereitstellen:
 - `PUT /priorities/:id` - Priorität aktualisieren
 - `DELETE /priorities/:id` - Priorität löschen
 
+### Dokumentation
+
+Die Dokumentation der API erfolgt über Swagger sowie über eine Datei 'rest.http' für den vs Code rest Client.
+
+
 ## Datenbank (SQLite)
 
-Die SQLite-Datenbank soll die folgenden Tabellen enthalten:
-- `tasks` - Aufgaben mit Feldern wie `id`, `title`, `description`, `dueDate`, `priorityId`, `projectId`, `completed`
-- `projects` - Projekte mit Feldern wie `id`, `name`, `description`
-- `priorities` - Prioritäten mit Feldern wie `id`, `name`
+Als Datenbanksystem soll eine SQLite-Datenbank verwendet werden. Die Datenbankdatei soll `database.sqlite` heißen und im Wurzelverzeichnis liegen.
 
 
 ## Client (angular oder react)
