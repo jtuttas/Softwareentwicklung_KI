@@ -31,7 +31,7 @@ Der Server soll auf Port 3000 laufen und die folgenden Endpunkte bereitstellen:
 
 ### Endpunkte
 
-- `GET /` - Basis-Route (z.B. "API läuft")
+- `GET /` - Basis-Route (z.B. "API läuft" oder Swagger Dokumentation)
 - `GET /tasks` - Alle Aufgaben abrufen
 - `POST /tasks` - Neue Aufgabe erstellen    
 - `GET /tasks/:id` - Aufgabe nach ID abrufen
@@ -47,6 +47,12 @@ Der Server soll auf Port 3000 laufen und die folgenden Endpunkte bereitstellen:
 - `GET /priorities/:id` - Priorität nach ID abrufen
 - `PUT /priorities/:id` - Priorität aktualisieren
 - `DELETE /priorities/:id` - Priorität löschen
+- `GET /users` - Alle Benutzer abrufen (nur für Admin)  
+- `POST /users` - Neuen Benutzer erstellen (nur für Admin)
+- `GET /users/:id` - Benutzer nach ID abrufen (nur für Admin)
+- `PUT /users/:id` - Benutzer aktualisieren (nur für Admin)
+- `DELETE /users/:id` - Benutzer löschen (nur für Admin)
+- `GET /users/me` - Aktuellen Benutzer abrufen (nach Login)
 
 ### Dokumentation
 
