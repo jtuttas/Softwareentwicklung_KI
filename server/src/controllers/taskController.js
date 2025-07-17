@@ -15,16 +15,28 @@ exports.getAllTasks = (req, res) => {
 };
 
 exports.createTask = (req, res) => {
-    const {title, description, dueDate, done, priority_id, project_id} = req.body;
-    db.run(`INSERT INTO tasks (title, description, dueDate, done, priority_id, project_id) VALUES (?,?,?,?,?,?)`,
-     [title, description, dueDate, done, priority_id, project_id], function(err) {
+    const {title, description, dueDate, done, priority_id, project_id, user_id} = req.body;
+    let assignedUserId = req.user.id;
+
+    if (req.user.role === 'Mitarbeiter') {
+        if (user_id && user_id !== req.user.id) {
+            return res.status(403).json({ "error": "Mitarbeiter can only assign tasks to themselves." });
+        }
+    } else { // Abteilungsleiter or Administrator
+        if (user_id) {
+            assignedUserId = user_id;
+        }
+    }
+
+    db.run(`INSERT INTO tasks (title, description, dueDate, done, priority_id, project_id, user_id) VALUES (?,?,?,?,?,?,?)`,
+     [title, description, dueDate, done, priority_id, project_id, assignedUserId], function(err) {
         if (err) {
             res.status(400).json({"error": err.message})
             return;
         }
         res.json({
             "message": "success",
-            "data": { id: this.lastID, ...req.body }
+            "data": { id: this.lastID, ...req.body, user_id: assignedUserId }
         })
     });
 };
@@ -43,14 +55,44 @@ exports.getTaskById = (req, res) => {
 };
 
 exports.updateTask = (req, res) => {
-    const {title, description, dueDate, done, priority_id, project_id} = req.body;
-    db.run(`UPDATE tasks set title = ?, description = ?, dueDate = ?, done = ?, priority_id = ?, project_id = ? WHERE id = ?`,
-        [title, description, dueDate, done, priority_id, project_id, req.params.id], (err, result) => {
-        if (err){
-            res.status(400).json({"error": res.message})
-            return;
+    const {title, description, dueDate, done, priority_id, project_id, user_id} = req.body;
+    const taskId = req.params.id;
+    let assignedUserId = user_id;
+
+    // Fetch the current task to check its assigned user
+    db.get("SELECT user_id FROM tasks WHERE id = ?", [taskId], (err, task) => {
+        if (err) {
+            return res.status(500).json({ "error": err.message });
         }
-        res.json({ message: "success", data: req.body})
+        if (!task) {
+            return res.status(404).json({ "message": "Task not found" });
+        }
+
+        if (req.user.role === 'Mitarbeiter') {
+            // Mitarbeiter can only update tasks assigned to them
+            if (task.user_id !== req.user.id) {
+                return res.status(403).json({ "error": "Mitarbeiter can only update their own tasks." });
+            }
+            // Mitarbeiter cannot change the assigned user_id
+            if (user_id && user_id !== req.user.id) {
+                return res.status(403).json({ "error": "Mitarbeiter cannot reassign tasks." });
+            }
+            assignedUserId = req.user.id; // Ensure Mitarbeiter can only assign to themselves
+        } else { // Abteilungsleiter or Administrator
+            // If no user_id is provided, keep the existing one
+            if (!user_id) {
+                assignedUserId = task.user_id;
+            }
+        }
+
+        db.run(`UPDATE tasks set title = ?, description = ?, dueDate = ?, done = ?, priority_id = ?, project_id = ?, user_id = ? WHERE id = ?`,
+            [title, description, dueDate, done, priority_id, project_id, assignedUserId, taskId], (err, result) => {
+            if (err){
+                res.status(400).json({"error": err.message})
+                return;
+            }
+            res.json({ message: "success", data: req.body})
+        });
     });
 };
 

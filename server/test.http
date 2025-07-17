@@ -1,5 +1,5 @@
 @api = http://localhost:3000
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJtaXRhcmJlaXRlciIsInJvbGUiOiJNaXRhcmJlaXRlciIsImlhdCI6MTc1Mjc2Mzc1OSwiZXhwIjoxNzUyNzY3MzU5fQ.S2npS4vFkBSeXplCdDu704huK4stlJ8sNRJi8z7cZ9o
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBZG1pbmlzdHJhdG9yIiwiaWF0IjoxNzUyNzY1OTk0LCJleHAiOjE3NTI3Njk1OTR9.gd3MPoXoC6D6QgsGv7f_0LVqTgU6_Lf-ZGqYiqjDDJM
 
 ###
 # Authentication
@@ -51,6 +51,38 @@ Authorization: Bearer {{token}}
 
 
 ###
+# Users (Admin only)
+###
+
+# Get all users
+GET {{api}}/users
+Authorization: Bearer {{token}}
+
+###
+
+# Get user by ID
+GET {{api}}/users/1
+Authorization: Bearer {{token}}
+
+###
+
+# Update a user
+PUT {{api}}/users/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "username": "updatedadmin",
+    "role": "Administrator"
+}
+
+###
+
+# Delete a user
+DELETE {{api}}/users/2
+Authorization: Bearer {{token}}
+
+###
 # Tasks
 ###
 
@@ -71,7 +103,8 @@ Authorization: Bearer {{token}}
     "dueDate": "2025-12-31",
     "done": false,
     "priority_id": 1,
-    "project_id": 1
+    "project_id": 1,
+    "user_id": 1
 }
 
 ###
@@ -93,7 +126,8 @@ Authorization: Bearer {{token}}
     "dueDate": "2026-01-15",
     "done": true,
     "priority_id": 1,
-    "project_id": 1
+    "project_id": 1,
+    "user_id": 1
 }
 
 ###

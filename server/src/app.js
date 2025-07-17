@@ -7,6 +7,7 @@ const specs = require('../swagger');
 const taskRoutes = require('./routes/taskRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const priorityRoutes = require('./routes/priorityRoutes');
+const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
@@ -22,6 +23,7 @@ app.use('/auth', authRoutes);
 app.use('/tasks', taskRoutes);
 app.use('/projects', projectRoutes);
 app.use('/priorities', priorityRoutes);
+app.use('/users', userRoutes);
 
 app.get('/swagger.json', (req, res) => {
   specs.servers = [{

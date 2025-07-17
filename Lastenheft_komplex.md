@@ -2,9 +2,9 @@
 
 ## Lastenheft
 
-Die Anwendung sollte es ermöglichen, Mitarbeitern diverse Aufgaben (To-dos) zuzuordnen und diese mit Prioritäten zu versehen. Die Aufgaben sind unterschiedlichen Projekten zugewiesen. Der Zugriff der ToDo-App soll per Desktop-PC sowie via Tablet und Smartphone möglich sein (responsive Design). Die Benutzerschnittstelle soll keine komplexen Grafiken enthalten und effizient geladen werden. Es ist nicht geplant eine Mehrsprachigkeit anzubieten. Ebenso ist der Grad der Barrierefreiheit als gering zu bewerten. Es werden keine Fehler in der GUI toleriert. Die Anwendung soll schnell auf Benutzereingaben reagieren.
+Die Anwendung sollte es ermöglichen, Mitarbeitern diverse Aufgaben (To-dos) zuzuordnen und diese mit Prioritäten zu versehen. Die Aufgaben sind unterschiedlichen Projekten zugewiesen. Der Zugriff der ToDo-App soll per Desktop-PC sowie via Tablet und Smartphone möglich sein (**responsive Design**). Die Benutzerschnittstelle soll keine komplexen Grafiken enthalten und effizient **dynamisch** geladen werden. Es ist nicht geplant eine Mehrsprachigkeit anzubieten. Ebenso ist der Grad der **Barrierefreiheit** als gering zu bewerten. Es werden keine Fehler in der GUI toleriert. Die Anwendung soll schnell auf Benutzereingaben reagieren.
 
-Meldet sich ein Mitarbeiter an dem System an (sofern er nicht schon angemeldet war), so sieht er eine Liste der zu bearbeitenden Aufgaben. Über eine Detailanzeige kann er hierbei erkennen, zu welchem Projekt die Aufgabe gehört, welche Priorität sie hat und wer noch daran mitarbeitet. Er hat ferner die Möglichkeit, die Aufgabe als erledigt zu markieren.
+Meldet sich ein Mitarbeiter an dem System an (sofern er nicht schon angemeldet war), so sieht er eine Liste der zu bearbeitenden Aufgaben. Über eine Detailanzeige kann er hierbei erkennen, zu welchem Projekt die Aufgabe gehört und welche Priorität sie hat. Er hat ferner die Möglichkeit, die Aufgabe als erledigt zu markieren.
 
 Abteilungsleiter sind auch Mitarbeiter. Wenn sich ein Abteilungsleiter am System anmeldet, so hat er darüber hinaus die Möglichkeit, die Aufgaben seiner Mitarbeiter zu sehen, sowie neue Aufgabe zu erstellen, diesen Mitarbeitern zuzuweisen und die Aufgaben diversen Prioritäten sowie Projekten zuzuordnen. Ferner verfügt er über die Berechtigung, neue Projekte anzulegen.
 

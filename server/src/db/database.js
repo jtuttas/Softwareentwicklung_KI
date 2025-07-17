@@ -28,8 +28,10 @@ db.serialize(() => {
         done BOOLEAN,
         priority_id INTEGER,
         project_id INTEGER,
+        user_id INTEGER,
         FOREIGN KEY (priority_id) REFERENCES priorities (id),
-        FOREIGN KEY (project_id) REFERENCES projects (id)
+        FOREIGN KEY (project_id) REFERENCES projects (id),
+        FOREIGN KEY (user_id) REFERENCES users (id)
     )`);
 
     db.run(`CREATE TABLE IF NOT EXISTS users (

@@ -58,6 +58,10 @@ const { verifyToken, isAbteilungsleiter } = require('../middleware/auth');
  *                     type: integer
  *                     description: The ID of the associated project.
  *                     example: 1
+ *                   user_id:
+ *                     type: integer
+ *                     description: The ID of the user assigned to the task.
+ *                     example: 1
  *       401:
  *         description: Unauthorized
  */
@@ -105,6 +109,10 @@ router.get('/', verifyToken, taskController.getAllTasks);
  *               project_id:
  *                 type: integer
  *                 description: The ID of the associated project.
+ *                 example: 1
+ *               user_id:
+ *                 type: integer
+ *                 description: The ID of the user assigned to the task. (Optional for Mitarbeiter, required for Abteilungsleiter/Administrator when assigning to others)
  *                 example: 1
  *     responses:
  *       201:
@@ -217,6 +225,10 @@ router.get('/:id', verifyToken, taskController.getTaskById);
  *               project_id:
  *                 type: integer
  *                 description: The ID of the associated project.
+ *                 example: 1
+ *               user_id:
+ *                 type: integer
+ *                 description: The ID of the user assigned to the task. (Optional for Mitarbeiter, required for Abteilungsleiter/Administrator when assigning to others)
  *                 example: 1
  *     responses:
  *       200:
