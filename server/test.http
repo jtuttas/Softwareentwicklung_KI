@@ -1,0 +1,198 @@
+@api = http://localhost:3000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJtaXRhcmJlaXRlciIsInJvbGUiOiJNaXRhcmJlaXRlciIsImlhdCI6MTc1Mjc2Mzc1OSwiZXhwIjoxNzUyNzY3MzU5fQ.S2npS4vFkBSeXplCdDu704huK4stlJ8sNRJi8z7cZ9o
+
+###
+# Authentication
+###
+
+# Login as Mitarbeiter
+POST {{api}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "mitarbeiter",
+    "password": "mitarbeiter"
+}
+
+###
+
+# Login as Abteilungsleiter
+POST {{api}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "abteilungsleiter",
+    "password": "abteilungsleiter"
+}
+
+###
+
+# Login as Administrator
+POST {{api}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+###
+
+# Create a new user (Admin only)
+POST {{api}}/auth/register
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "username": "neueruser",
+    "password": "passwort123",
+    "role": "Mitarbeiter"
+}
+
+
+###
+# Tasks
+###
+
+# Get all tasks
+GET {{api}}/tasks
+Authorization: Bearer {{token}}
+
+###
+
+# Create a new task
+POST {{api}}/tasks
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "title": "Neue Aufgabe",
+    "description": "Beschreibung der Aufgabe",
+    "dueDate": "2025-12-31",
+    "done": false,
+    "priority_id": 1,
+    "project_id": 1
+}
+
+###
+
+# Get task by id
+GET {{api}}/tasks/1
+Authorization: Bearer {{token}}
+
+###
+
+# Update a task
+PUT {{api}}/tasks/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "title": "Aktualisierte Aufgabe",
+    "description": "Aktualisierte Beschreibung",
+    "dueDate": "2026-01-15",
+    "done": true,
+    "priority_id": 1,
+    "project_id": 1
+}
+
+###
+
+# Mark a task as done
+PATCH {{api}}/tasks/3/done
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "done": true
+}
+
+###
+
+# Delete a task
+DELETE {{api}}/tasks/2
+Authorization: Bearer {{token}}
+
+###
+# Projects
+###
+
+# Get all projects
+GET {{api}}/projects
+Authorization: Bearer {{token}}
+
+###
+
+# Create a new project
+POST {{api}}/projects
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Neues Projekt"
+}
+
+###
+
+# Get project by id
+GET {{api}}/projects/1
+Authorization: Bearer {{token}}
+
+###
+
+# Update a project
+PUT {{api}}/projects/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Aktualisiertes Projekt"
+}
+
+###
+
+# Delete a project
+DELETE {{api}}/projects/1
+Authorization: Bearer {{token}}
+
+###
+# Priorities
+###
+
+# Get all priorities
+GET {{api}}/priorities
+Authorization: Bearer {{token}}
+
+###
+
+# Create a new priority
+POST {{api}}/priorities
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Hohe Priorität"
+}
+
+###
+
+# Get priority by id
+GET {{api}}/priorities/1
+Authorization: Bearer {{token}}
+
+###
+
+# Update a priority
+PUT {{api}}/priorities/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Sehr hohe Priorität"
+}
+
+###
+
+# Delete a priority
+DELETE {{api}}/priorities/1
+Authorization: Bearer {{token}}
