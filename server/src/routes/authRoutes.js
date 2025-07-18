@@ -36,15 +36,27 @@ const { verifyToken, isAdmin } = require('../middleware/auth');
  *                 description: User's password
  *     responses:
  *       200:
- *         description: Authentication successful, returns JWT token
+ *         description: Authentication successful, returns JWT token and user object
  *         content:
  *           application/json:
  *             schema:
  *               type: object
  *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Login successful
  *                 token:
  *                   type: string
  *                   description: JWT authentication token
+ *                 user:
+ *                   type: object
+ *                   properties:
+ *                     id:
+ *                       type: integer
+ *                     username:
+ *                       type: string
+ *                     role:
+ *                       type: string
  *       401:
  *         description: Invalid credentials
  *         content:

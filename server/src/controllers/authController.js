@@ -19,8 +19,11 @@ exports.login = (req, res) => {
                 return res.status(401).json({ error: 'Invalid password' });
             }
 
+            const userResponse = { ...user };
+            delete userResponse.password;
+
             const token = jwt.sign({ id: user.id, username: user.username, role: user.role }, 'your_jwt_secret', { expiresIn: '1h' });
-            res.json({ message: 'Login successful', token });
+            res.json({ message: 'Login successful', token, user: userResponse });
         });
     });
 };
