@@ -37,6 +37,7 @@ class:
 
 ![bg blur:6px opacity](pic1.png)
 
+
 # 5 Stufen der KI Nutzung
 
 1. Nichtnutzer von KI
@@ -45,10 +46,7 @@ class:
 4. Chat first Code
 5. Vibe Coder
 
-<small>vgl. <https://www.heise.de/hintergrund/KI-Navigator-11-Fuenf-Stufen-der-KI-Nutzung-in-der-Softwareentwicklung-10457094.html> von Bastian Weinlich und Semjon Mössinger
-
-
-
+<!-- footer: vgl. <https://www.heise.de/hintergrund/KI-Navigator-11-Fuenf-Stufen-der-KI-Nutzung-in-der-Softwareentwicklung-10457094.html> von Bastian Weinlich und Semjon Mössinger -->
 ---
 
 ![bg left:33% ](agenda.png)
@@ -58,6 +56,10 @@ class:
 - Github CoPilot - Autocompletion
 - Agenten (github Copilot, Codex, Gemini)
 - MCP - Model Context Protocol
+
+<!-- footer: Ki unterstützte Softwareentwicklung -->
+
+
 
 ---
 
