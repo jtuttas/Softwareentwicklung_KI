@@ -10,6 +10,8 @@ class:
   - invert
 ---
 
+
+
 ![bg opacity:30%](pic1.png)
 
 # KI unterstützte Softwareentwicklung
@@ -17,6 +19,8 @@ class:
 ### von und mit Jörg Tuttas
 
 ---
+
+<!-- header: KI unterstützte Softwareentwicklung  -->
 
 ![bg blur:6px opacity](pic1.png)
 
@@ -153,6 +157,37 @@ Inkl. Deployment auf Vercel
 <!-- footer: 2025 -->
 
 ---
+
+![bg blur:6px opacity](pic1.png)
+
+## Gemini CLI installieren
+
+> node.js muss installiert sein <https://nodejs.org/en/download>
+
+anschließend in der Konsole:
+
+```bash
+npm install -g gemini-cli
+```
+
+<!-- footer: 2025 -->
+
+---
+
+![bg blur:6px opacity](pic1.png)
+
+## Repository zum Workshop
+
+Clonen Sie sich das folgende Repository:
+
+```bash
+git clone https://github.com/jtuttas/Softwareentwicklung_KI
+```
+
+<!-- footer: 2025 -->
+
+---
+
 
 ![bg blur:6px opacity](pic1.png)
 
