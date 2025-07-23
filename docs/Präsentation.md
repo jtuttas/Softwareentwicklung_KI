@@ -142,6 +142,8 @@ Inkl. Deployment auf Vercel
 
 ## Github Pages auf dev-branch
 
+> Erstelle anhand von Lastenheft.md und Pflichtenheft-Bootstap.md die Anwendung !
+
 <https://jtuttas.github.io/Softwareentwicklung_KI/>
 
 <!-- footer: 2025 -->
