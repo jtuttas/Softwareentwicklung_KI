@@ -138,6 +138,15 @@ Inkl. Deployment auf Vercel
 <!-- footer: 2025 -->
 
 ---
+![bg blur:6px opacity](pic1.png)
+
+## Github Pages auf dev-branch
+
+<https://jtuttas.github.io/Softwareentwicklung_KI/>
+
+<!-- footer: 2025 -->
+
+---
 
 ![bg blur:6px opacity](pic1.png)
 
