@@ -71,6 +71,17 @@ class:
 
 ![bg blur:6px opacity](pic1.png)
 
+# One Note 
+
+<https://tinyurl.com/s6w4tsdf> 
+
+![QR Onenote](QR-Onenote.png)
+
+<!-- footer:   -->
+---
+
+![bg blur:6px opacity](pic1.png)
+
 # ChatGPT
 
 > Erstelle mit die Klasse Person.java mit den Attributen "sex" und "dayOfBirth" sowie der Methode getAge():int
