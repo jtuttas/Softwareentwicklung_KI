@@ -28,7 +28,8 @@ class:
 
 ![bg left:33% ](agenda.png)
 
-- Agenten (github Copilot, Codex, **Gemini**)
+
+- Agenten (Claude Desktop, github Copilot, Codex, **Gemini**)
 - MCP - Model Context Protocol
 
 
@@ -38,11 +39,22 @@ class:
 
 # Agenten
 
+- Claude Desktop (Anthropic)
 - Codex (OpenAI)
 - github Copilot (Microsoft)
 - Gemini (Google)
 
 <!-- footer: 2025 -->
+
+---
+
+![bg blur:6px opacity](pic1.png)
+
+## Claude Desktop die KI von Anthropic
+
+![claude](claude.png)
+
+<!-- footer: 2024 -->
 
 ---
 
