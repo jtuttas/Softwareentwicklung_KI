@@ -40,7 +40,7 @@ class:
 # Tools & Agenten
 
 - Claude Desktop (Anthropic)
-- Codex (OpenAI)
+- Codex Web/CLI (OpenAI)
 - github Copilot (Microsoft)
 - Gemini (Google)
 
@@ -60,7 +60,7 @@ class:
 
 ![bg blur:6px opacity](pic1.png)
 
-## Codex der Agent in der Cloud
+## Codex Web der Agent in der Cloud
 
 ![codex](codex.png)
 
@@ -79,7 +79,7 @@ class:
 
 ![bg blur:6px opacity](pic1.png)
 
-## Gemini CLI der Agent im Terminal
+## Gemini CLI der Agent von Google im Terminal
 
 ![gemini](gemini.png)
 
@@ -89,7 +89,17 @@ class:
 
 ![bg blur:6px opacity](pic1.png)
 
-## Gemini CLI installieren
+## Codex CLI der Agent von OpenAI im Terminal
+
+![gemini](codex-cli.png)
+
+<!-- footer: 2025 -->
+
+---
+
+![bg blur:6px opacity](pic1.png)
+
+## Gemini / Codex CLI installieren
 
 > node.js muss installiert sein <https://nodejs.org/en/download>
 
@@ -97,6 +107,12 @@ anschließend in der Konsole:
 
 ```bash
 npm install -g gemini-cli
+gemini
+```
+
+```bash
+npm i -g @openai/codex
+codex -
 ```
 
 <!-- footer: 2025 -->
@@ -111,6 +127,22 @@ Clonen Sie sich das folgende Repository:
 
 ```bash 
 git clone https://github.com/jtuttas/Softwareentwicklung_KI
+```
+
+<!-- footer: 2025 -->
+
+---
+
+![bg blur:6px opacity](pic1.png)
+
+## Bsp. Prompts
+
+```bash 
+codex --full-auto "Erstelle die todo App wie im Lastenheft.md und Pflichtenheft-Bootstrap.md beschrieben"
+```
+
+```bash 
+gemini -p "Erstelle die todo App wie im Lastenheft.md und Pflichtenheft-Bootstrap.md beschrieben"
 ```
 
 <!-- footer: 2025 -->
