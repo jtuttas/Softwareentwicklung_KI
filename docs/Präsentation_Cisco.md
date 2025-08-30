@@ -28,8 +28,8 @@ class:
 
 ![bg left:33% ](agenda.png)
 
-
-- Agenten (Claude Desktop, github Copilot, Codex, **Gemini**)
+- Tools (Claude Desktop)
+- Agenten (github Copilot, Codex, **Gemini**)
 - MCP - Model Context Protocol
 
 
@@ -37,7 +37,7 @@ class:
 
 ![bg blur:6px opacity](pic1.png)
 
-# Agenten
+# Tools & Agenten
 
 - Claude Desktop (Anthropic)
 - Codex (OpenAI)
