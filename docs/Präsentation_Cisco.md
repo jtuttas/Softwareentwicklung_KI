@@ -16,7 +16,9 @@ class:
 
 # KI unterstützte Softwareentwicklung
 
-### von und mit Jörg Tuttas
+#### von und mit Jörg Tuttas
+
+#### MMBbS Hannover
 
 ---
 
@@ -25,12 +27,20 @@ class:
 > KI wird Sie nicht ersetzen, aber Entwickler, die KI nutzen, werden Entwickler ersetzen, die es nicht tun.
 
 ---
+![bg blur:6px opacity](pic1.png)
+
+### Welche KI Tools zur Softwareentwicklung kennt Ihr?
+
+![Wortwolke](wortwolke.png)
+
+---
 
 ![bg left:33% ](agenda.png)
 
 - Tools (Claude Desktop)
 - Agenten (github Copilot, Codex, **Gemini**)
 - MCP - Model Context Protocol
+
 
 
 ---
@@ -44,7 +54,8 @@ class:
 - github Copilot (Microsoft)
 - Gemini (Google)
 
-<!-- footer: 2025 -->
+
+
 
 ---
 
@@ -54,15 +65,21 @@ class:
 
 ![claude](claude.png)
 
-<!-- footer: 2024 -->
+<!-- https://www.qrcode-monkey.com/ -->
+
+<!-- footer: 2025 -->
 
 ---
 
 ![bg blur:6px opacity](pic1.png)
 
-## Codex Web der Agent in der Cloud
+### Codex Web der Agent in der Cloud
+
+<https://jtuttas.github.io/codextest/>
 
 ![codex](codex.png)
+
+<!-- Am besten den main Branch im  https://github.com/jtuttas/codextest Repository wählen, da hier Github Pages aktiviert ist über <https://jtuttas.github.io/codextest/> -->
 
 <!-- footer: 2025 -->
 

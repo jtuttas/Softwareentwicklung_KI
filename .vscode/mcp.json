@@ -11,12 +11,13 @@
                 "mysql://root:@localhost:3306/bsp_pcshop"
             ]
         },
-        "sqlite": {
-            "command": "uvx",
+        "MCP SQLite Server": {
+            "type": "stdio",
+            "command": "npx",
             "args": [
-                "mcp-server-sqlite",
-                "--db-path",
-                "${input:db_path}"
+                "-y",
+                "mcp-sqlite",
+                "database.sqlite"
             ]
         }
     }
