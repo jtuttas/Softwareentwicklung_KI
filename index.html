@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">✓ ToDo App</div>
+    </nav>
+
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <ul class="nav-tabs">
+            <li>
+                <button class="active" id="tasks-tab" onclick="switchTab('tasks')">
+                    📋 Aufgaben
+                </button>
+            </li>
+            <li>
+                <button id="projects-tab" onclick="switchTab('projects')">
+                    📁 Projekte
+                </button>
+            </li>
+            <li>
+                <button id="priorities-tab" onclick="switchTab('priorities')">
+                    ⚠️ Prioritäten
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Tasks Tab -->
+            <div class="tab-pane active" id="tasks">
+                <div style="margin-bottom: 20px;">
+                    <button class="btn btn-primary" id="addTaskBtn">➕ Neue Aufgabe</button>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="filter-section">
+                    <input type="text" id="searchTask" placeholder="Aufgabe suchen...">
+                    <select id="filterPriority">
+                        <option value="">Alle Prioritäten</option>
+                    </select>
+                    <select id="filterProject">
+                        <option value="">Alle Projekte</option>
+                    </select>
+                    <select id="sortBy">
+                        <option value="">Sortieren nach...</option>
+                        <option value="dueDate-asc">Fälligkeit (aufsteigend)</option>
+                        <option value="dueDate-desc">Fälligkeit (absteigend)</option>
+                        <option value="priority-asc">Priorität (aufsteigend)</option>
+                        <option value="priority-desc">Priorität (absteigend)</option>
+                    </select>
+                </div>
+
+                <!-- Tasks List -->
+                <div id="tasksList"></div>
+            </div>
+
+            <!-- Projects Tab -->
+            <div class="tab-pane" id="projects">
+                <div style="margin-bottom: 20px;">
+                    <button class="btn btn-primary" id="addProjectBtn">➕ Neues Projekt</button>
+                </div>
+                <div id="projectsList"></div>
+            </div>
+
+            <!-- Priorities Tab -->
+            <div class="tab-pane" id="priorities">
+                <div style="margin-bottom: 20px;">
+                    <button class="btn btn-primary" id="addPriorityBtn">➕ Neue Priorität</button>
+                </div>
+                <div id="prioritiesList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Modal -->
+    <div class="modal" id="taskModal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h5 class="modal-title" id="taskModalTitle">Aufgabe hinzufügen</h5>
+                <button class="btn-close" onclick="closeModal('taskModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="taskForm" onsubmit="return false;">
+                    <input type="hidden" id="taskId">
+                    <div class="mb-3">
+                        <label for="taskTitle">Titel *</label>
+                        <input type="text" id="taskTitle" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskDueDate">Fälligkeitsdatum</label>
+                        <input type="date" id="taskDueDate">
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskPriority">Priorität</label>
+                        <select id="taskPriority"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskProject">Projekt</label>
+                        <select id="taskProject">
+                            <option value="">Kein Projekt</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('taskModal')">Abbrechen</button>
+                <button class="btn btn-primary" id="saveTaskBtn">Speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalTitle">Projekt hinzufügen</h5>
+                <button class="btn-close" onclick="closeModal('projectModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="projectForm" onsubmit="return false;">
+                    <input type="hidden" id="projectId">
+                    <div class="mb-3">
+                        <label for="projectName">Name *</label>
+                        <input type="text" id="projectName" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('projectModal')">Abbrechen</button>
+                <button class="btn btn-primary" id="saveProjectBtn">Speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Priority Modal -->
+    <div class="modal" id="priorityModal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h5 class="modal-title" id="priorityModalTitle">Priorität hinzufügen</h5>
+                <button class="btn-close" onclick="closeModal('priorityModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="priorityForm" onsubmit="return false;">
+                    <input type="hidden" id="priorityId">
+                    <div class="mb-3">
+                        <label for="priorityName">Name *</label>
+                        <input type="text" id="priorityName" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('priorityModal')">Abbrechen</button>
+                <button class="btn btn-primary" id="savePriorityBtn">Speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

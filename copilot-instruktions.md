@@ -6,6 +6,12 @@ Endpunkte für:
 - Aufgaben (CRUD)
 - Projekte (CRUD)
 - Prioritäten (CRUD)
+- Benutzer (Login, Rollen)
+
+Die Authentifizierung der Benutzer erfolgt über ein Login-System. 
+
+Die Benutzer haben unterschiedliche Rollen (Mitarbeiter, Abteilungsleiter, Administrator) und damit unterschiedliche Berechtigungen.
+
 
 ## Server (node.js)
 
@@ -24,9 +30,9 @@ server/
 
 Der Server soll auf Port 3000 laufen und die folgenden Endpunkte bereitstellen:
 
-## Endpunkte
+### Endpunkte
 
-- `GET /` - Basis-Route (z.B. "API läuft")
+- `GET /` - Basis-Route (z.B. "API läuft oder Swagger Dokumentation")
 - `GET /tasks` - Alle Aufgaben abrufen
 - `POST /tasks` - Neue Aufgabe erstellen    
 - `GET /tasks/:id` - Aufgabe nach ID abrufen
@@ -42,13 +48,22 @@ Der Server soll auf Port 3000 laufen und die folgenden Endpunkte bereitstellen:
 - `GET /priorities/:id` - Priorität nach ID abrufen
 - `PUT /priorities/:id` - Priorität aktualisieren
 - `DELETE /priorities/:id` - Priorität löschen
+- `POST /login` - Benutzeranmeldung (Login)
+- `GET /users` - Alle Benutzer abrufen (nur für Admin)  
+- `POST /users` - Neuen Benutzer erstellen (nur für Admin)
+- `GET /users/:id` - Benutzer nach ID abrufen (nur für Admin)
+- `PUT /users/:id` - Benutzer aktualisieren (nur für Admin)
+- `DELETE /users/:id` - Benutzer löschen (nur für Admin)
+- `GET /users/me` - Aktuellen Benutzer abrufen (nach Login)
+
+### Dokumentation
+
+Die Dokumentation der API erfolgt über Swagger sowie über eine Datei 'rest.http' für den vs Code rest Client.
+
 
 ## Datenbank (SQLite)
 
-Die SQLite-Datenbank soll die folgenden Tabellen enthalten:
-- `tasks` - Aufgaben mit Feldern wie `id`, `title`, `description`, `dueDate`, `priorityId`, `projectId`, `completed`
-- `projects` - Projekte mit Feldern wie `id`, `name`, `description`
-- `priorities` - Prioritäten mit Feldern wie `id`, `name`
+Als Datenbanksystem soll eine SQLite-Datenbank verwendet werden. Die Datenbankdatei soll `database.sqlite` heißen und im Wurzelverzeichnis liegen.
 
 
 ## Client (angular oder react)

@@ -2,13 +2,19 @@
 
 ## Lastenheft
 
-Entwickelt werden soll eine einfache ToDO App. Der Anwender hat die Möglichkeit Aufgaben anzulegen und diese mit einem Fälligkeitsdatum zu versehen. Die Aufgaben können dabei mit Prioritäten versehen werden und einzelnen Projekten zugeordnet werden. Für die Prioritäten und Projekte soll es zusätzliche Reiter oder Bildschirme geben, um diese Eingeben, ändern und löschen zu können!
+Die Anwendung sollte es ermöglichen, Mitarbeitern diverse Aufgaben (To-dos) zuzuordnen und diese mit Prioritäten zu versehen. Die Aufgaben sind unterschiedlichen Projekten zugewiesen. Der Zugriff der ToDo-App soll per Desktop-PC sowie via Tablet und Smartphone möglich sein (responsive Design). Die Benutzerschnittstelle soll keine komplexen Grafiken enthalten und effizient geladen werden. Es ist nicht geplant eine Mehrsprachigkeit anzubieten. Ebenso ist der Grad der Barrierefreiheit als gering zu bewerten. Es werden keine Fehler in der GUI toleriert. Die Anwendung soll schnell auf Benutzereingaben reagieren.
 
-Der Anwender hat die Möglichkeit die Aufgaben als erledigt zu markieren oder zu löschen. Ferner kann er das Fälligkeitsdatum und den Titel und die Priorität der Aufgabe ändern.
+Meldet sich ein Mitarbeiter an dem System an (sofern er nicht schon angemeldet war), so sieht er eine Liste der zu bearbeitenden Aufgaben. Über eine Detailanzeige kann er hierbei erkennen, zu welchem Projekt die Aufgabe gehört, welche Priorität sie hat und wer noch daran mitarbeitet. Er hat ferner die Möglichkeit, die Aufgabe als erledigt zu markieren.
 
-Der Anwender kann die Liste der Aufgaben nach Fälligkeit, Priorität und Projekten filtern. Ferner kann der Anwender die Aufgaben nach Fälligkeit und Priorität sortieren.
+Abteilungsleiter sind auch Mitarbeiter. Wenn sich ein Abteilungsleiter am System anmeldet, so hat er darüber hinaus die Möglichkeit, die Aufgaben seiner Mitarbeiter zu sehen, sowie neue Aufgabe zu erstellen, diesen Mitarbeitern zuzuweisen und die Aufgaben diversen Prioritäten sowie Projekten zuzuordnen. Ferner verfügt er über die Berechtigung, neue Projekte anzulegen.
 
-### Funktionale Anforderungen
+Der Administrator des Systems kann Benutzerkonten anlegen und für diese Rollen vergeben und ändern. Das Backend steht in Form einer REST-API zur Verfügung. In diesem Lernfeld soll für diese Anwendung ein Frontend entwickelt werden.
+
+## Funktionale Anforderungen
+
+* Für die Rollen Mitarbeiter, Abteilungsleiter und Administrator sollen unterschiedliche Funktionen bereitgestellt werden.
+
+* Die Authentifizierung der Benutzer erfolgt über ein Login-System.
 
 * Die Anwendung soll eine einfache Möglichkeit bieten, Aufgaben zu suchen und zu filtern.
 
