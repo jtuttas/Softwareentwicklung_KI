@@ -52,3 +52,7 @@ Der Administrator des Systems kann Benutzerkonten anlegen und für diese Rollen 
 
 * Die Anwendung soll eine ansprechende und moderne Benutzeroberfläche haben.
 
+## Dokumentation
+
+* Es soll eine ausführliche Dokumentation der Anwendung geben, die die Funktionen und die Bedienung erklärt.
+* Die Dokumentation soll Screenshots der Benutzeroberfläche in verschiedenen Zuständen (Desktop/Mobile) enthalten.
