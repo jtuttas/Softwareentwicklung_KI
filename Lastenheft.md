@@ -8,7 +8,7 @@ Der Anwender hat die Möglichkeit die Aufgaben als erledigt zu markieren oder zu
 
 Der Anwender kann die Liste der Aufgaben nach Fälligkeit, Priorität und Projekten filtern. Ferner kann der Anwender die Aufgaben nach Fälligkeit und Priorität sortieren.
 
-## Funktionale Anforderungen
+### Funktionale Anforderungen
 
 * Die Anwendung soll eine einfache Möglichkeit bieten, Aufgaben zu suchen und zu filtern.
 
@@ -46,3 +46,7 @@ Der Anwender kann die Liste der Aufgaben nach Fälligkeit, Priorität und Projek
 
 * Die Anwendung soll eine ansprechende und moderne Benutzeroberfläche haben.
 
+## Dokumentation
+
+* Es soll eine ausführliche Dokumentation der Anwendung geben, die die Funktionen und die Bedienung erklärt.
+* Die Dokumentation soll Screenshots der Benutzeroberfläche in verschiedenen Zuständen (Desktop/Mobile) enthalten.
