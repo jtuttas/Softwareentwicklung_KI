@@ -1,0 +1,111 @@
+/* Custom styles for ToDo App */
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* Task Card Styling */
+.task-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 1rem;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-card.done {
+    opacity: 0.7;
+    background-color: #e9ecef;
+}
+
+.task-card.done .task-title {
+    text-decoration: line-through;
+}
+
+.task-title {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.task-meta {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.task-meta i {
+    margin-right: 0.3rem;
+}
+
+/* Priority Badges */
+.priority-badge {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.6rem;
+}
+
+/* Project and Priority List Items */
+.list-item-card {
+    transition: transform 0.2s;
+}
+
+.list-item-card:hover {
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .task-card {
+        font-size: 0.9rem;
+    }
+    
+    .btn-group-sm > .btn {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+/* Alert for no data */
+.no-data-alert {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+}
+
+/* Overdue task highlighting */
+.task-card.overdue {
+    border-left: 4px solid #dc3545;
+}
+
+/* Due soon highlighting */
+.task-card.due-soon {
+    border-left: 4px solid #ffc107;
+}
+
+/* Priority color coding */
+.priority-low {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.priority-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.priority-high {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Task action buttons */
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.task-actions .btn {
+    font-size: 0.85rem;
+}
