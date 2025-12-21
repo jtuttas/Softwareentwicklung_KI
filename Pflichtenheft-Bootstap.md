@@ -108,4 +108,11 @@ Ziel ist die Entwicklung einer clientseitigen ToDo-Anwendung, die Aufgaben lokal
 
 ---
 
-Wenn du möchtest, kann ich dir auch direkt das Grundgerüst (HTML + JS) dafür generieren. Sag einfach Bescheid.
+## 7. Dokumentation und Tests
+
+* Ausführliche Code-Kommentare
+* Usability-Tests gemäß `usability.md`  
+* Testfälle für alle funktionalen Anforderungen
+* Dokumentation der Implementierungsschritte und Entscheidungen
+* Screenshots der UI in verschiedenen Zuständen (Desktop/Mobile)
+
