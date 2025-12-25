@@ -9,3 +9,5 @@
 *.log
 server/node_modules/*
 client/node_modules/*
+# Ignore lib directory (external libraries)
+lib/
