@@ -10,7 +10,7 @@ class:
   - invert
 ---
 
-<!-- header: Nationale Cisco Akademien Tage 2026  -->
+<!-- header: Nationaler Cisco Akademien Tage 2026  -->
 
 ![bg opacity:40%](agentSmith_16_9.png)
 
@@ -72,7 +72,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 <!-- https://www.qrcode-monkey.com/ -->
 
-<!-- footer: 2025 -->
+
 
 ---
 
@@ -86,7 +86,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 <!-- Am besten den main Branch im  https://github.com/jtuttas/codextest Repository wählen, da hier Github Pages aktiviert ist über <https://jtuttas.github.io/codextest/> -->
 
-<!-- footer: 2025 -->
+
 
 ---
 
@@ -96,7 +96,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 ![copilot](copilot.png)
 
-<!-- footer: 2025 -->
+
 ---
 
 ![bg blur:6px opacity](pic2.png)
@@ -105,7 +105,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 ![gemini](gemini.png)
 
-<!-- footer: 2025 -->
+
 
 ---
 
@@ -115,7 +115,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 ![gemini](codex-cli.png)
 
-<!-- footer: 2025 -->
+
 
 ---
 
@@ -131,7 +131,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 npm install -g @google/gemini-cli
 ```
 
-<!-- footer: 2025 -->
+
 
 ---
 
@@ -145,7 +145,7 @@ Clonen Sie sich das folgende Repository:
 git clone https://github.com/jtuttas/Softwareentwicklung_KI
 ```
 
-<!-- footer: 2025 -->
+
 ---
 
 ![bg left:25% ](workshop.png)
@@ -156,7 +156,7 @@ git clone https://github.com/jtuttas/Softwareentwicklung_KI
 - SRS.md - Software Requirements Specification, das Pflichtenheft der Anwendung
 - AGENT.md - Beschreibung der Agenten
 
-<!-- footer: 2025 -->
+
 
 ---
 
@@ -167,28 +167,64 @@ git clone https://github.com/jtuttas/Softwareentwicklung_KI
 Starten Sie den Gemini Agenten und nutzen Sie folgenden Prompt:
 
 ```txt
-"Erstelle mir die Anwendung wie in den Anforderungen beschrieben"
+Erstelle mir die Anwendung wie in den Anforderungen beschrieben
 ```
 
 
-<!-- footer: 2025 -->
+
 
 ---
 
-![bg blur:6px opacity](pic2.png)
+![bg blur:3px opacity](pic2.png)
 
 ## MCP - Model Context Protocol
 
 > Die KI Agenten bekommen Werkzeuge
 
-<!-- footer: Nov. 2024 -->
+
+
 ---
 
-![bg blur:6px opacity](pic2.png)
+![bg right:25% ](AgentSmithMCP.png)
+
+Über /mcp können die unterschiedlichen MCP Server und deren Tools angezeigt werden
+
+Prompt:
+
+```txt
+Erstelle eine README.md mit Screenshots der Anwendung
+```
+
+
+---
+
+![bg left:25% ](AgentSmithMCP.png)
+
+Im Projekt enthalten ist auch ein Azure MCP Server.
+
+Prompt:
+
+```txt
+Veröffentliche mir die Anwendung auf Azure nutze Azure MCP 
+```
+
+
+---
+
+![bg right:25% ](AgentSmithMCP.png)
 
 ## MCP Server Datenbank
 
 ![mcpso](mcpso.png)
 
-<!-- footer: 2025 -->
+---
+
+![bg left:25% ](AgentSmithFragen.png)
+
+## Was bleibt?
+
+- Wie kann dis Ausbildung zum Fachinformatiker auf diese Entwicklung reagieren?
+- Welche Kompetenzen brauchen Entwickler in der Zukunft?
+
+
 

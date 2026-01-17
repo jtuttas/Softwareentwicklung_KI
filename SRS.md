@@ -4,6 +4,8 @@
 
 Ziel ist die Entwicklung einer clientseitigen ToDo-Anwendung, die Aufgaben lokal im Browser speichert. Die Benutzeroberfläche soll responsiv mit **Bootstrap** umgesetzt werden. Die Interaktivität wird mit **jQuery** realisiert. Alle Daten werden im **localStorage** des Browsers persistiert.
 
+Der gesamte Code soll modular und wartbar sein, unter Berücksichtigung von Best Practices in der Webentwicklung. Der Sourcecode soll im Ordner `./src/` abgelegt werden. 
+
 ## 2. Technische Rahmenbedingungen
 
 | Komponente            | Technologie                   |
@@ -114,6 +116,8 @@ Ziel ist die Entwicklung einer clientseitigen ToDo-Anwendung, die Aufgaben lokal
 * Testfälle für alle funktionalen Anforderungen
 * Dokumentation der Implementierungsschritte und Entscheidungen
 * Anfertigen einer Softwaredokumentation DOKUMENTATION.md mit Screenshots der UI in verschiedenen Zuständen (Desktop/Mobile)
+* erstellen und aktualisieren einer README.md mit Projektbeschreibung, Installationsanleitung und Nutzungshinweisen
+* Protokolliere alle Änderungen, die du vornimmst in der Datei ./CHANGELOG.md mit Datum und einer kurzen Beschreibung der Änderungen unter der Sektion "Unreleased".
 
 
 
