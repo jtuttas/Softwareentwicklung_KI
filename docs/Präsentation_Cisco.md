@@ -32,7 +32,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 ![bg left:33% ](agenda.png)
 
-- Überblick Agenten (github Copilot, Codex, **Gemini CLI**, Claude Desktop)
+- Überblick aktuelle Agenten (github Copilot, Codex, **Gemini CLI**, Claude Desktop)
 - Workshop: Erstellen einer App mit Agenten
 - MCP - Model Context Protocol
 
@@ -58,7 +58,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 - Claude Desktop / CLI (Anthropic)
 - Codex Web/CLI (OpenAI)
 - github Copilot / CLI (Microsoft)
-- Gemini (Google)
+- Gemini CLI (Google)
 
 
 
