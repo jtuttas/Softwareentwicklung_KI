@@ -111,10 +111,9 @@ Ziel ist die Entwicklung einer clientseitigen ToDo-Anwendung, die Aufgaben lokal
 ## 7. Dokumentation und Tests
 
 * Ausführliche Code-Kommentare
-* Usability-Tests gemäß `usability.md`. Dieses Dokument entsprechend ausfüllen!  
 * Testfälle für alle funktionalen Anforderungen
 * Dokumentation der Implementierungsschritte und Entscheidungen
 * Anfertigen einer Softwaredokumentation DOKUMENTATION.md mit Screenshots der UI in verschiedenen Zuständen (Desktop/Mobile)
-* Versionskontrolle mit Git, regelmäßige Commits mit aussagekräftigen Nachrichten
+
 
 

@@ -10,58 +10,63 @@ class:
   - invert
 ---
 
-<!-- header: Niedersächsische Cisco Akademien Tage 2025  -->
+<!-- header: Nationale Cisco Akademien Tage 2026  -->
 
-![bg opacity:30%](pic1.png)
+![bg opacity:40%](agentSmith_16_9.png)
 
-# KI unterstützte Softwareentwicklung
+# Agenten getriebene Softwareentwicklung
 
 #### von und mit Jörg Tuttas
+
+Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 #### MMBbS Hannover
 
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg blur:3px opacity](pic2.png)
 
 > KI wird Sie nicht ersetzen, aber Entwickler, die KI nutzen, werden Entwickler ersetzen, die es nicht tun.
-
----
-![bg blur:6px opacity](pic1.png)
-
-### Welche KI Tools zur Softwareentwicklung kennt Ihr?
-
-![Wortwolke](wortwolke.png)
 
 ---
 
 ![bg left:33% ](agenda.png)
 
-- Tools (Claude Desktop)
-- Agenten (github Copilot, Codex, **Gemini**)
+- Überblick Agenten (github Copilot, Codex, **Gemini**, Claude Desktop)
+- Workshop: Erstellen einer App mit Agenten
 - MCP - Model Context Protocol
 
 
 
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg right:25% ](agentSmith.png)
 
-# Tools & Agenten
+# Agenten
 
-- Claude Desktop (Anthropic)
-- Codex Web/CLI (OpenAI)
-- github Copilot (Microsoft)
-- Gemini (Google)
-
+> Agenten haben einen Auftrag und nutzen Werkzeuge, um diesen Auftrag zu erfüllen.
 
 
 
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg left:25% ](agentSmith.png)
 
-## Claude Desktop die KI von Anthropic
+
+# Bekannte Agenten:
+
+- Claude Desktop / CLI (Anthropic)
+- Codex Web/CLI (OpenAI)
+- github Copilot / CLI (Microsoft)
+- Gemini (Google)
+
+
+
+---
+
+![bg blur:3px opacity](pic2.png)
+
+## Claude Desktop (Anthropic)
 
 ![claude](claude.png)
 
@@ -71,7 +76,7 @@ class:
 
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg blur:6px opacity](pic2.png)
 
 ### Codex Web der Agent in der Cloud
 
@@ -85,7 +90,7 @@ class:
 
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg blur:6px opacity](pic2.png)
 
 ## CoPilot im Agent Mode
 
@@ -94,7 +99,7 @@ class:
 <!-- footer: 2025 -->
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg blur:6px opacity](pic2.png)
 
 ## Gemini CLI der Agent von Google im Terminal
 
@@ -104,7 +109,7 @@ class:
 
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg blur:6px opacity](pic2.png)
 
 ## Codex CLI der Agent von OpenAI im Terminal
 
@@ -114,29 +119,23 @@ class:
 
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg left:25% ](workshop.png)
 
-## Gemini / Codex CLI installieren
+## Gemini CLI installieren
 
 > node.js muss installiert sein <https://nodejs.org/en/download>
 
-anschließend in der Konsole:
+## anschließend in der Konsole:
 
 ```bash
-npm install -g gemini-cli
-gemini
-```
-
-```bash
-npm i -g @openai/codex
-codex -
+npm install -g @google/gemini-cli
 ```
 
 <!-- footer: 2025 -->
 
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg right:25% ](workshop.png)
 
 ## Repository zum Workshop
 
@@ -147,26 +146,36 @@ git clone https://github.com/jtuttas/Softwareentwicklung_KI
 ```
 
 <!-- footer: 2025 -->
-
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg left:25% ](workshop.png)
 
-## Bsp. Prompts
+## Die wichtigstens Dateien im Repository
 
-```bash 
-codex --full-auto "Erstelle die todo App wie im Lastenheft.md und Pflichtenheft-Bootstrap.md beschrieben"
-```
-
-```bash 
-gemini -p "Erstelle die todo App wie im Lastenheft.md und Pflichtenheft-Bootstrap.md beschrieben"
-```
+- PRD.md - Produkt Requirements Document, das Lastenheft der Anwendung
+- SRS.md - Software Requirements Specification, das Pflichtenheft der Anwendung
+- AGENT.md - Beschreibung der Agenten
 
 <!-- footer: 2025 -->
 
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg right:25% ](workshop.png)
+
+## Prompt
+
+Starten Sie den Gemini Agenten und nutzen Sie folgenden Prompt:
+
+```txt
+"Erstelle mir die Anwendung wie in den Anforderungen beschrieben"
+```
+
+
+<!-- footer: 2025 -->
+
+---
+
+![bg blur:6px opacity](pic2.png)
 
 ## MCP - Model Context Protocol
 
@@ -175,7 +184,7 @@ gemini -p "Erstelle die todo App wie im Lastenheft.md und Pflichtenheft-Bootstra
 <!-- footer: Nov. 2024 -->
 ---
 
-![bg blur:6px opacity](pic1.png)
+![bg blur:6px opacity](pic2.png)
 
 ## MCP Server Datenbank
 
