@@ -115,7 +115,6 @@ Der gesamte Code soll modular und wartbar sein, unter Berücksichtigung von Best
 * Ausführliche Code-Kommentare
 * Testfälle für alle funktionalen Anforderungen
 * Dokumentation der Implementierungsschritte und Entscheidungen
-* Anfertigen einer Softwaredokumentation DOKUMENTATION.md mit Screenshots der UI in verschiedenen Zuständen (Desktop/Mobile)
 * erstellen und aktualisieren einer README.md mit Projektbeschreibung, Installationsanleitung und Nutzungshinweisen
 * Protokolliere alle Änderungen, die du vornimmst in der Datei ./CHANGELOG.md mit Datum und einer kurzen Beschreibung der Änderungen unter der Sektion "Unreleased".
 
