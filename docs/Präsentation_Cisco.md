@@ -162,7 +162,7 @@ git clone https://github.com/jtuttas/Softwareentwicklung_KI
 
 ![bg right:25% ](workshop.png)
 
-## Prompt
+# Prompt
 
 Starten Sie den Gemini Agenten und nutzen Sie folgenden Prompt:
 
@@ -189,7 +189,7 @@ Erstelle mir die Anwendung wie in den Anforderungen beschrieben
 
 Über /mcp können die unterschiedlichen MCP Server und deren Tools angezeigt werden
 
-Prompt:
+# Prompt
 
 ```txt
 Erstelle eine README.md mit Screenshots der Anwendung
@@ -202,7 +202,7 @@ Erstelle eine README.md mit Screenshots der Anwendung
 
 Im Projekt enthalten ist auch ein Azure MCP Server.
 
-Prompt:
+# Prompt
 
 ```txt
 Veröffentliche mir die Anwendung auf Azure nutze Azure MCP 
