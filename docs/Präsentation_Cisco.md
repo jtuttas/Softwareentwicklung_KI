@@ -185,6 +185,16 @@ Erstelle mir die Anwendung wie in den Anforderungen beschrieben
 
 ---
 
+
+
+## Architektur MCP
+
+![MCP Architektur](https://cdn.prod.website-files.com/6295808d44499cde2ba36c71/685b65381dde1a7cfd6e57da_AD_4nXdHa_WaBxdnittoF8ZKISlwErtJ3fc-yV76exBYQeUyOHZbx4V3CMu-ngh5wg2DdNWkC5eDJyVSIVkqX5rtV2Qrfc2TKRv2z_oSqNsiX73sRdJqxlu2pnxPIe4svBtSPj4zvEu5iQ.png)
+
+
+
+---
+
 ![bg right:25% ](AgentSmithMCP.png)
 
 Über /mcp können die unterschiedlichen MCP Server und deren Tools angezeigt werden
