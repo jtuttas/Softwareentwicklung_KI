@@ -1,0 +1,62 @@
+{
+    "mcpServers": {
+        "playwright": {
+            "type": "local",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@playwright/mcp@latest"
+            ],
+            "tools": [
+                "*"
+            ]
+        },
+        "sqlite": {
+            "type": "local",
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "./database.sqlite"
+            ],
+            "tools": [
+                "*"
+            ]
+        },
+        "azure": {
+            "type": "local",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@azure/mcp@latest",
+                "server",
+                "start"
+            ],
+            "tools": [
+                "*"
+            ]
+        },
+        "perplexity-ask": {
+            "type": "local",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@chatmcp/server-perplexity-ask"
+            ],
+            "tools": [
+                "*"
+            ]
+        },
+        "context7": {
+            "type": "local",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@upstash/context7-mcp"
+            ],
+            "tools": [
+                "*"
+            ]
+        }
+    }
+}
