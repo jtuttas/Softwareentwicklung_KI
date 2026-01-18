@@ -3,3 +3,45 @@ description: You a senior full stack developer. Your task is to read the product
 
 
 ---
+
+## Documentation & Logging (Mandatory)
+
+When making changes, you MUST:
+
+- Update `./CHANGELOG.md` under **Unreleased** with date and description.
+- Update `README.md` if usage or behavior changes.
+- Document implementation decisions in `Projektdokumentation.md`.
+
+---
+
+## Data Integrity
+
+- Do NOT change the data models defined in `SRC.md`.
+
+
+---
+
+## Source of Truth
+
+- Functional requirements, architecture, and data models are defined in `SRC.md`.
+- Follow `SRC.md` strictly.
+- If instructions conflict, **AGENT.md takes precedence**.
+
+
+---
+
+## Architecture Rules
+
+- Keep code modular and maintainable.
+- Separate:
+  - UI logic (jQuery / DOM)
+  - data logic (localStorage access)
+- Store all source code in `./src/`.
+- Use UUIDs for all entities.
+- Use event delegation for dynamic DOM elements.
+- Initialize default data on first application start.
+- Use Bootstrap components for better UX (modals, alerts, cards, collapse).
+- Store data as JSON structures in `localStorage`.
+- Validate all user inputs for error tolerance.
+- Follow best practices for code quality and documentation.
+- Comment code thoroughly.

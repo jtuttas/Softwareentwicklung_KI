@@ -113,10 +113,8 @@ Der gesamte Code soll modular und wartbar sein, unter Berücksichtigung von Best
 ## 7. Dokumentation und Tests
 
 * Ausführliche Code-Kommentare
-* Testfälle für alle funktionalen Anforderungen
-* Dokumentation der Implementierungsschritte und Entscheidungen
+* Dokumentation der Implementierungsschritte, Entscheidungen und Herausforderungen in einer Datei Projektdokumentation.md.
+* Erstellen einer Bedienungsanleitung für Endbenutzer.
 * erstellen und aktualisieren einer README.md mit Projektbeschreibung, Installationsanleitung und Nutzungshinweisen
 * Protokolliere alle Änderungen, die du vornimmst in der Datei ./CHANGELOG.md mit Datum und einer kurzen Beschreibung der Änderungen unter der Sektion "Unreleased".
-
-
 
