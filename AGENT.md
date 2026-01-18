@@ -12,6 +12,22 @@ When making changes, you MUST:
 - Update `README.md` if usage or behavior changes.
 - Document implementation decisions in `Projektdokumentation.md`.
 
+
+---
+
+## Technology Constraints (Mandatory)
+
+- Use **Bootstrap 5** for UI.
+- Use **jQuery 3.x** for all DOM interaction and UI logic.
+- Use **browser localStorage only** for persistence.
+
+DO NOT:
+
+- introduce frameworks (React, Vue, etc.)
+- replace jQuery or Bootstrap
+- introduce build tools or transpilers
+- introduce server-side components
+
 ---
 
 ## Data Integrity
