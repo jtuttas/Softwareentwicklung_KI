@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App - Thiese GmbH</title>
+    
+    <!-- Bootstrap CSS - Local minimal version -->
+    <link href="bootstrap-minimal.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-check-circle-fill"></i> ToDo App
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-view="tasks">
+                            <i class="bi bi-list-task"></i> Aufgaben
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-view="projects">
+                            <i class="bi bi-folder"></i> Projekte
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-view="priorities">
+                            <i class="bi bi-flag"></i> Prioritäten
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mt-4">
+        <!-- Tasks View -->
+        <div id="tasksView" class="view-container">
+            <div class="row mb-3">
+                <div class="col-md-8">
+                    <h2><i class="bi bi-list-task"></i> Aufgaben</h2>
+                </div>
+                <div class="col-md-4 text-end">
+                    <button class="btn btn-primary" id="addTaskBtn">
+                        <i class="bi bi-plus-circle"></i> Neue Aufgabe
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter and Sort Controls -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label">Filter nach Projekt:</label>
+                            <select class="form-select" id="filterProject">
+                                <option value="">Alle Projekte</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Filter nach Priorität:</label>
+                            <select class="form-select" id="filterPriority">
+                                <option value="">Alle Prioritäten</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Sortieren nach:</label>
+                            <select class="form-select" id="sortBy">
+                                <option value="dueDate">Fälligkeitsdatum</option>
+                                <option value="priority">Priorität</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Reihenfolge:</label>
+                            <select class="form-select" id="sortOrder">
+                                <option value="asc">Aufsteigend</option>
+                                <option value="desc">Absteigend</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" id="searchTask" placeholder="Aufgabe suchen...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tasks List -->
+            <div id="tasksList"></div>
+        </div>
+
+        <!-- Projects View -->
+        <div id="projectsView" class="view-container" style="display: none;">
+            <div class="row mb-3">
+                <div class="col-md-8">
+                    <h2><i class="bi bi-folder"></i> Projekte</h2>
+                </div>
+                <div class="col-md-4 text-end">
+                    <button class="btn btn-primary" id="addProjectBtn">
+                        <i class="bi bi-plus-circle"></i> Neues Projekt
+                    </button>
+                </div>
+            </div>
+            <div id="projectsList"></div>
+        </div>
+
+        <!-- Priorities View -->
+        <div id="prioritiesView" class="view-container" style="display: none;">
+            <div class="row mb-3">
+                <div class="col-md-8">
+                    <h2><i class="bi bi-flag"></i> Prioritäten</h2>
+                </div>
+                <div class="col-md-4 text-end">
+                    <button class="btn btn-primary" id="addPriorityBtn">
+                        <i class="bi bi-plus-circle"></i> Neue Priorität
+                    </button>
+                </div>
+            </div>
+            <div id="prioritiesList"></div>
+        </div>
+    </div>
+
+    <!-- Task Modal -->
+    <div class="modal fade" id="taskModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskModalLabel">Aufgabe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="taskForm">
+                        <input type="hidden" id="taskId">
+                        <div class="mb-3">
+                            <label for="taskTitle" class="form-label">Titel <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="taskTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskDueDate" class="form-label">Fälligkeitsdatum</label>
+                            <input type="date" class="form-control" id="taskDueDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskPriority" class="form-label">Priorität</label>
+                            <select class="form-select" id="taskPriority">
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskProject" class="form-label">Projekt</label>
+                            <select class="form-select" id="taskProject">
+                                <option value="">Kein Projekt</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                    <button type="button" class="btn btn-primary" id="saveTaskBtn">Speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel">Projekt</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="projectForm">
+                        <input type="hidden" id="projectId">
+                        <div class="mb-3">
+                            <label for="projectName" class="form-label">Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="projectName" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                    <button type="button" class="btn btn-primary" id="saveProjectBtn">Speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Priority Modal -->
+    <div class="modal fade" id="priorityModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="priorityModalLabel">Priorität</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="priorityForm">
+                        <input type="hidden" id="priorityId">
+                        <div class="mb-3">
+                            <label for="priorityName" class="form-label">Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="priorityName" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                    <button type="button" class="btn btn-primary" id="savePriorityBtn">Speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple jQuery replacement -->
+    <script src="simple-jquery.js"></script>
+    <!-- Simple Bootstrap Modal replacement -->
+    <script src="simple-bootstrap.js"></script>
+    <!-- App JS -->
+    <script src="app.js"></script>
+</body>
+</html>
