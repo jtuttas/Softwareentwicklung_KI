@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
-const { verifyToken, isAdmin } = require('../middleware/auth');
+const { verifyToken, isAdmin, isAbteilungsleiter } = require('../middleware/auth');
 
 /**
  * @swagger
  * tags:
  *   name: Users
- *   description: User management (Admin only)
+ *   description: User management (Administratoren; Abteilungsleiter dürfen die Benutzerliste lesen)
  */
 
 /**
@@ -44,9 +44,9 @@ const { verifyToken, isAdmin } = require('../middleware/auth');
  *       401:
  *         description: Unauthorized
  *       403:
- *         description: Forbidden, only Administrators can access this resource
+ *         description: Forbidden, only Administrators oder Abteilungsleiter können auf diese Ressource zugreifen
  */
-router.get('/', [verifyToken, isAdmin], userController.getAllUsers);
+router.get('/', [verifyToken, isAbteilungsleiter], userController.getAllUsers);
 
 /**
  * @swagger

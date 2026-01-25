@@ -44,7 +44,9 @@ db.serialize(() => {
     const users = [
         { username: 'admin', password: 'admin', role: 'Administrator' },
         { username: 'abteilungsleiter', password: 'abteilungsleiter', role: 'Abteilungsleiter' },
-        { username: 'mitarbeiter', password: 'mitarbeiter', role: 'Mitarbeiter' }
+        { username: 'mitarbeiter', password: 'mitarbeiter', role: 'Mitarbeiter' },
+        { username: 'mitarbeiter2', password: 'mitarbeiter2', role: 'Mitarbeiter' },
+        { username: 'mitarbeiter3', password: 'mitarbeiter3', role: 'Mitarbeiter' }
     ];
 
     const stmt = db.prepare("INSERT INTO users (username, password, role) VALUES (?, ?, ?)");
