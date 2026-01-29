@@ -10,7 +10,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: ${{ secrets.DOCKER_HUB_USERNAME }}/softwareentwicklung-server
+  IMAGE_NAME: tuttas/lf9server
 
 jobs:
   build-and-push:
