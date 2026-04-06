@@ -23,13 +23,6 @@
                 "start"
             ]
         },
-        "perplexity-ask": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@chatmcp/server-perplexity-ask"
-            ]
-        },
         "context7": {
             "command": "npx",
             "args": [
