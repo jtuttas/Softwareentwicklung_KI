@@ -32,7 +32,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 ![bg left:33% ](agenda.png)
 
-- Überblick aktuelle Agenten (github Copilot, Codex, **Gemini CLI**, Claude Desktop)
+- Überblick aktuelle Agenten (github Copilot, Codex, **Gemini CLI**, Claude *Desktop/CLI*)
 - Workshop: Erstellen einer App mit Agenten
 - MCP - Model Context Protocol
 
@@ -69,6 +69,18 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 ## Claude Desktop (Anthropic)
 
 ![claude](claude.png)
+
+<!-- https://www.qrcode-monkey.com/ -->
+
+
+
+---
+
+![bg blur:3px opacity](pic2.png)
+
+## Claude Code (Anthropic)
+
+![claude](claude-code.png)
 
 <!-- https://www.qrcode-monkey.com/ -->
 
@@ -150,11 +162,11 @@ git clone https://github.com/jtuttas/Softwareentwicklung_KI
 
 ![bg left:25% ](workshop.png)
 
-## Die wichtigstens Dateien im Repository
+## Die wichtigsten Dateien im Repository
 
 - PRD.md - Produkt Requirements Document, das Lastenheft der Anwendung
 - SRS.md - Software Requirements Specification, das Pflichtenheft der Anwendung
-- AGENT.md - Beschreibung der Agenten
+- AGENTS.md - Beschreibung für den Agenten
 
 
 
@@ -218,6 +230,7 @@ Im Projekt enthalten ist auch ein Azure MCP Server.
 Veröffentliche mir die Anwendung auf Azure nutze Azure MCP 
 ```
 
+<small style="position:absolute;bottom:30px;color:#888">¹ Sofern Sie über die notwendigen Berechtigungen verfügen</small>
 
 ---
 

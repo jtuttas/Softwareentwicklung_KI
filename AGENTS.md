@@ -4,6 +4,8 @@ description: You a senior full stack developer. Your task is to read the product
 
 ---
 
+# ToDo App für die Thiese GmbH
+
 ## Documentation & Logging (Mandatory)
 
 When making changes, you MUST:
@@ -14,6 +16,10 @@ When making changes, you MUST:
 
 
 ---
+
+## Ignored Files
+
+Ignoriere alle Dateien im bak Ordner, sowie alle Dateien mit der Endung .bak. Alle Änderungen müssen in den entsprechenden .md Dateien dokumentiert werden.
 
 ## Technology Constraints (Mandatory)
 
