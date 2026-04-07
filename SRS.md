@@ -1,5 +1,20 @@
 # 📝 Pflichtenheft: ToDo-App (Umsetzung mit Bootstrap, jQuery, localStorage)
 
+## Auftragnehmer
+
+Die Umsetzung der ToDo-App erfolgt durch die Change IT GmbH, ein erfahrenes Softwareentwicklungshaus mit Expertise in Webanwendungen und Frontend-Entwicklung. 
+
+### Ansprechpartner
+
+* Herr Schmidt (Projektleiter)
+* Frau Becker (Lead Developer)
+
+### Adresse
+
+Change IT GmbH
+Expo Plaza 3
+30539 Hannover
+
 ## 1. Zielsetzung
 
 Ziel ist die Entwicklung einer clientseitigen ToDo-Anwendung, die Aufgaben lokal im Browser speichert. Die Benutzeroberfläche soll responsiv mit **Bootstrap** umgesetzt werden. Die Interaktivität wird mit **jQuery** realisiert. Alle Daten werden im **localStorage** des Browsers persistiert.
@@ -99,7 +114,18 @@ Der gesamte Code soll modular und wartbar sein, unter Berücksichtigung von Best
 
 ---
 
-## 6. Best Practices
+## UI Design und Layout
+
+Auf den Seiten sollte das Logo der Tiese Gmbh zu sehen sein (siehe logo-Tiese-groß.png bzw. logo-Tiese-klein.png). Es soll eine übersichtliche und intuitive Benutzeroberfläche geben, die es dem Anwender ermöglicht, schnell und einfach Aufgaben zu verwalten. Die Hauptseite sollte eine Liste aller Aufgaben anzeigen, mit Optionen zum Filtern und Sortieren. Es sollte klare Buttons oder Links geben, um neue Aufgaben, Prioritäten und Projekte hinzuzufügen. Bearbeitungs- und Löschoptionen sollten leicht zugänglich sein. Die Anwendung sollte auf verschiedenen Bildschirmgrößen gut funktionieren (responsive design).
+
+### Farben und Schriftarten
+
+* Primärfarbe: #5F6463
+* Sekundärfarbe: #9D9B9D
+* Akzentfarbe: #FF4845
+* Schriftart: Arial, sans-serif
+
+## 7. Best Practices
 
 * Modularer Code: Trennung von UI-Logik (jQuery) und Datenlogik (Storage)
 * Verwenden von UUIDs für eindeutige Identifikation
@@ -110,10 +136,9 @@ Der gesamte Code soll modular und wartbar sein, unter Berücksichtigung von Best
 
 ---
 
-## 7. Dokumentation und Tests
+## 8. Dokumentation und Tests
 
 * Ausführliche Code-Kommentare
-* Dokumentation der Implementierungsschritte, Entscheidungen und Herausforderungen in einer Datei Projektdokumentation.md.
 * Erstellen einer Bedienungsanleitung für Endbenutzer.
 * erstellen und aktualisieren einer README.md mit Projektbeschreibung, Installationsanleitung und Nutzungshinweisen
 * Protokolliere alle Änderungen, die du vornimmst in der Datei ./CHANGELOG.md mit Datum und einer kurzen Beschreibung der Änderungen unter der Sektion "Unreleased".

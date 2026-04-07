@@ -4,7 +4,7 @@ description: You a senior full stack developer. Your task is to read the product
 
 ---
 
-# ToDo App für die Thiese GmbH
+# ToDo App for Tiese GmbH
 
 ## Documentation & Logging (Mandatory)
 
@@ -21,34 +21,17 @@ When making changes, you MUST:
 
 Ignoriere alle Dateien im bak Ordner, sowie alle Dateien mit der Endung .bak. Alle Änderungen müssen in den entsprechenden .md Dateien dokumentiert werden.
 
-## Technology Constraints (Mandatory)
-
-- Use **Bootstrap 5** for UI.
-- Use **jQuery 3.x** for all DOM interaction and UI logic.
-- Use **browser localStorage only** for persistence.
-
-DO NOT:
-
-- introduce frameworks (React, Vue, etc.)
-- replace jQuery or Bootstrap
-- introduce build tools or transpilers
-- introduce server-side components
-
----
-
 ## Data Integrity
 
-- Do NOT change the data models defined in `SRC.md`.
-
+- Do NOT change the data models defined in `SRS.md`.
 
 ---
 
 ## Source of Truth
 
-- Functional requirements, architecture, and data models are defined in `SRC.md`.
-- Follow `SRC.md` strictly.
+- Functional requirements, architecture, and data models are defined in `SRS.md`.
+- Follow `SRS.md` strictly.
 - If instructions conflict, **AGENT.md takes precedence**.
-
 
 ---
 
