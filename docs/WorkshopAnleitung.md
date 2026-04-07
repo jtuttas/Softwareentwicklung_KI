@@ -57,7 +57,15 @@ Navigieren Sie in das Verzeichnis `src` innerhalb des geklonten Repositorys:
 
 Öffnen Sie die Datei `index.html` in einem modernen Webbrowser, um die ToDo-Anwendung zu starten. Die Anwendung ist sofort einsatzbereit und speichert Daten lokal in Ihrem Browser.
 
-## 7. Weitere Schritte (MCP)
+## 7. Skills verwenden
+
+Im Repository ist bereits ein Skill definiert, der die Erstellung einer IHK Projektdokumentation ermöglicht. Sie können diesen Skill nutzen, um eine Projektdokumentation für die erstellte Anwendung zu generieren.
+
+```txt
+Erstelle mir eine IHK Projektdokumentation für die Anwendung wie in den Anforderungen beschrieben
+```
+
+## 8. Weitere Schritte (MCP)
 
 Erstellen Sie via MCP (Playwright MCP Server) Screenshots der Anwendung und generieren Sie eine README.md Datei mit den Screenshots.
 
@@ -65,7 +73,7 @@ Erstellen Sie via MCP (Playwright MCP Server) Screenshots der Anwendung und gene
 Ergänze Projektdokumentation.md um Screenshots der Anwendung
 ```
 
-## 8. Veröffentlichung auf Azure (MCP)
+## 9. Veröffentlichung auf Azure (MCP)
 
 Veröffentlichen Sie die Anwendung auf Azure mittels Azure MCP Server.
 
@@ -74,11 +82,4 @@ Veröffentliche mir die Anwendung auf Azure nutze Azure MCP
 ```
 
 > Stellen Sie sicher, dass Sie ein Azure-Konto haben und die erforderlichen Berechtigungen zum Veröffentlichen von Webanwendungen besitzen.
-
-
-
-
-
-
-
 
