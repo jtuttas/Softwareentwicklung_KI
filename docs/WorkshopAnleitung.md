@@ -70,7 +70,7 @@ Erstelle mir eine IHK Projektdokumentation für die Anwendung wie in den Anforde
 Erstellen Sie via MCP (Playwright MCP Server) Screenshots der Anwendung und generieren Sie eine README.md Datei mit den Screenshots.
 
 ```txt
-Ergänze Bedienungsanleitung.md um Screenshots der Anwendung
+Ergänze Bedienungsanleitung.md um Screenshots der Anwendung, nutze Playwright MCP Server um die Screenshots zu erstellen
 ```
 
 ## 9. Veröffentlichung auf Azure (MCP)
