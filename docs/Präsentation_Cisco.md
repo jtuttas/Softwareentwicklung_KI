@@ -182,8 +182,16 @@ Starten Sie den Gemini Agenten und nutzen Sie folgenden Prompt:
 Erstelle mir die Anwendung wie in den Anforderungen beschrieben
 ```
 
+---
+![bg left:25% ](smith_skill.png)
 
+# Skills
 
+Skills sind klar abgegrenzte Fähigkeiten oder Bausteine, mit denen ein KI-Agent bestimmte Aufgaben zuverlässig ausführen kann.
+
+```txt
+Erstelle mir eine IHK Projektdokumentation für die Anwendung wie in den Anforderungen beschrieben
+```
 
 ---
 
@@ -242,7 +250,7 @@ Veröffentliche mir die Anwendung auf Azure nutze Azure MCP
 
 ---
 
-![bg left:25% ](AgentSmithFragen.png)
+![bg left:33% ](smith_cooked.png)
 
 ## Was bleibt?
 
