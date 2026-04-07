@@ -222,7 +222,8 @@ Erstelle mir eine IHK Projektdokumentation für die Anwendung wie in den Anforde
 # Prompt
 
 ```txt
-Ergänze die Benutzeranleitung.md um Screenshots der Anwendung, nutze Playwright MCP Server um die Screenshots zu erstellen
+Ergänze die Benutzeranleitung.md um Screenshots der Anwendung, 
+nutze Playwright MCP Server um die Screenshots zu erstellen
 ```
 
 
