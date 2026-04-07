@@ -12,7 +12,6 @@ When making changes, you MUST:
 
 - Update `./CHANGELOG.md` under **Unreleased** with date and description.
 - Update `README.md` if usage or behavior changes.
-- Document implementation decisions in `Projektdokumentation.md`.
 
 
 ---

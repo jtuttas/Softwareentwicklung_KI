@@ -139,7 +139,7 @@ Auf den Seiten sollte das Logo der Tiese Gmbh zu sehen sein (siehe logo-Tiese-gr
 ## 8. Dokumentation und Tests
 
 * Ausführliche Code-Kommentare
-* Erstellen einer Bedienungsanleitung für Endbenutzer.
+* Erstellen einer Bedienungsanleitung für Endbenutzer (Bedienungsanleitung.md).
 * erstellen und aktualisieren einer README.md mit Projektbeschreibung, Installationsanleitung und Nutzungshinweisen
 * Protokolliere alle Änderungen, die du vornimmst in der Datei ./CHANGELOG.md mit Datum und einer kurzen Beschreibung der Änderungen unter der Sektion "Unreleased".
 
