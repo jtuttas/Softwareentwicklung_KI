@@ -222,7 +222,7 @@ Erstelle mir eine IHK Projektdokumentation für die Anwendung wie in den Anforde
 # Prompt
 
 ```txt
-Erstelle eine README.md mit Screenshots der Anwendung
+Ergänze die Benutzeranleitung.md um Screenshots der Anwendung, nutze Playwright MCP Server um die Screenshots zu erstellen
 ```
 
 
