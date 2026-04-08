@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where uvx:*)",
+      "Bash(where npx:*)",
+      "mcp__sqlite__list_tables"
+    ]
+  }
+}
