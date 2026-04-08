@@ -25,6 +25,8 @@ Der gesamte Code soll modular und wartbar sein, unter Berücksichtigung von Best
 
 ## 2. Technische Rahmenbedingungen
 
+KEIN CDN verwenden sondern Komponenten lokal einbinden um Edge's Tracking Prevention zur vermeiden!
+
 | Komponente            | Technologie                   |
 | --------------------- | ----------------------------- |
 | UI-Framework          | Bootstrap (v5)                |
