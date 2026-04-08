@@ -46,7 +46,7 @@ gemini
 Starten Sie den Gemini Agenten und nutzen Sie folgenden Prompt:
 
 ```txt
-Erstelle mir die Anwendung wie in den Anforderungen beschrieben
+@AGENTS.md Erstelle mir die Anwendung wie in den Anforderungen beschrieben
 ```
 
 Der Agent wird nun die Anwendung basierend auf den im Repository enthaltenen Anforderungen generieren.
