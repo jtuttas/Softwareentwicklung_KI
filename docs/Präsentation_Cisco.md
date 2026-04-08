@@ -179,7 +179,7 @@ git clone https://github.com/jtuttas/Softwareentwicklung_KI
 Starten Sie den Gemini Agenten und nutzen Sie folgenden Prompt:
 
 ```txt
-Erstelle mir die Anwendung wie in den Anforderungen beschrieben
+@AGENTS.md Erstelle mir die Anwendung wie in den Anforderungen beschrieben
 ```
 
 ---
