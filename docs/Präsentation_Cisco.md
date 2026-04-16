@@ -32,7 +32,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 ![bg left:33% ](agenda.png)
 
-- Überblick aktuelle Agenten (github Copilot, Codex, **Gemini CLI**, Claude *Desktop/CLI*)
+- Überblick aktuelle Agenten (**github Copilot**, Codex, Gemini CLI, Claude *Desktop/CLI*)
 - Workshop: Erstellen einer App mit Agenten
 - MCP - Model Context Protocol
 
@@ -100,22 +100,16 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 
 
+
+
+
 ---
 
 ![bg blur:6px opacity](pic2.png)
 
-## CoPilot im Agent Mode
+## Github Copilot CLI 
 
 ![copilot](copilot.png)
-
-
----
-
-![bg blur:6px opacity](pic2.png)
-
-## Gemini CLI der Agent von Google im Terminal
-
-![gemini](gemini.png)
 
 
 
@@ -125,7 +119,7 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 ## Codex CLI der Agent von OpenAI im Terminal
 
-![gemini](codex-cli.png)
+![codex](codex-cli.png)
 
 
 
@@ -133,14 +127,15 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 ![bg left:25% ](workshop.png)
 
-## Gemini CLI installieren
+## Github Copilot CLI installieren
 
 > node.js muss installiert sein <https://nodejs.org/en/download>
 
 ## anschließend in der Konsole:
 
 ```bash
-npm install -g @google/gemini-cli
+npm install -g @github/copilot
+
 ```
 
 
@@ -176,10 +171,10 @@ git clone https://github.com/jtuttas/Softwareentwicklung_KI
 
 # Prompt
 
-Starten Sie den Gemini Agenten und nutzen Sie folgenden Prompt:
+Starten Sie den Github Copilot via *copilot* und nutzen Sie folgenden Prompt:
 
 ```txt
-@AGENTS.md Erstelle mir die Anwendung wie in den Anforderungen beschrieben
+Erstelle mir die Anwendung wie in den Anforderungen beschrieben
 ```
 
 ---

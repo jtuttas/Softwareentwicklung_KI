@@ -1,19 +1,19 @@
 # Workshop Anleitung
 
-In diesem Workshop lernen Sie, wie Sie mit dem Gemini CLI Agenten von Google eine einfache ToDo-Anwendung erstellen können. Der Agent wird die Anwendung basierend auf den vorgegebenen Anforderungen generieren.
+In diesem Workshop lernen Sie, wie Sie mit dem Github Copilot CLI Agenten eine einfache ToDo-Anwendung erstellen können. Der Agent wird die Anwendung basierend auf den vorgegebenen Anforderungen generieren.
 
 ## 1. Voraussetzungen
 
-Es muss Node.js (Version 20 oder höher) und npm auf dem System installiert sein. Zusätzlich wird ein moderner Webbrowser benötigt, um die Anwendung auszuführen.
+1. Es muss **Node.js** (Version 20 oder höher) auf dem System installiert sein [https://nodejs.org/en/download](https://nodejs.org/en/download). 
 
-Installieren Sie Node.js von der offiziellen Webseite: [https://nodejs.org/en/download](https://nodejs.org/en/download).
+2. Ein **Github Account** ist erforderlich, um die Github Copilot CLI zu verwenden und die Anwendung zu generieren.
 
-## 2. Installation der Gemini CLI
+## 2. Installation der Github Copilot CLI
 
-Öffnen Sie ein Terminal oder eine Eingabeaufforderung und führen Sie den folgenden Befehl aus, um die Gemini CLI global zu installieren:
+Öffnen Sie ein Terminal oder eine Eingabeaufforderung und führen Sie den folgenden Befehl aus, um die Github Copilot CLI global zu installieren:
 
 ```bash
-npm install -g @google/gemini-cli
+npm install -g @github/copilot
 ```
 
 ## 3. Repository klonen
@@ -31,22 +31,23 @@ git clone https://github.com/jtuttas/Softwareentwicklung_KI
 ```bash 
 cd Softwareentwicklung_KI
 ```
-## 4. Starten des Gemini Agenten
 
-Starten Sie den Gemini Agenten mit dem folgenden Befehl:
+## 4. Starten des Github Copilot Agenten
+
+Starten Sie den Github Copilot Agenten mit dem folgenden Befehl:
 
 ```bash
-gemini
+copilot
 ```
 
-> ggf. müssen Sie sich mit Ihrem Google-Konto anmelden und die erforderlichen Berechtigungen erteilen.
+> ggf. müssen Sie sich mit Ihrem Github-Konto anmelden und die erforderlichen Berechtigungen erteilen.
 
 ## 5. Prompt verwenden
 
-Starten Sie den Gemini Agenten und nutzen Sie folgenden Prompt:
+Starten Sie den Github Copilot Agenten und nutzen Sie folgenden Prompt:
 
 ```txt
-@AGENTS.md Erstelle mir die Anwendung wie in den Anforderungen beschrieben
+Erstelle mir die Anwendung wie in den Anforderungen beschrieben
 ```
 
 Der Agent wird nun die Anwendung basierend auf den im Repository enthaltenen Anforderungen generieren.

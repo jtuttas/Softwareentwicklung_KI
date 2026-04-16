@@ -27,6 +27,7 @@
             "type": "local",
             "command": "npx",
             "args": [
+                "-y",
                 "@azure/mcp",
                 "server",
                 "start"

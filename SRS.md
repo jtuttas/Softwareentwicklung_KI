@@ -19,7 +19,7 @@ Expo Plaza 3
 
 Ziel ist die Entwicklung einer clientseitigen ToDo-Anwendung, die Aufgaben lokal im Browser speichert. Die Benutzeroberfläche soll responsiv mit **Bootstrap** umgesetzt werden. Die Interaktivität wird mit **jQuery** realisiert. Alle Daten werden im **localStorage** des Browsers persistiert.
 
-Die Anwendung sollte einfach durch öffnen der Seite index.htm (also über file://) zu öffnen sein!
+Die Anwendung sollte einfach durch öffnen der Seite index.htm (also über file://) zu öffnen sein! Eine Internetverbindung ist nicht erforderlich, da alle Ressourcen lokal eingebunden werden müssen (kein CDN).
 
 Der gesamte Code soll modular und wartbar sein, unter Berücksichtigung von Best Practices in der Webentwicklung. Der Sourcecode soll im Ordner `./src/` abgelegt werden. 
 
