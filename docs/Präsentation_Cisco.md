@@ -125,6 +125,16 @@ Leiter des Bildungsgangs f. Fachinformatiker Anwendungsentwicklung
 
 ---
 
+![bg blur:6px opacity](pic2.png)
+
+## Gemini CLI der Agent von google im Terminal
+
+![gemini](gemini.png)
+
+
+
+---
+
 ![bg left:25% ](workshop.png)
 
 ## Github Copilot CLI installieren
@@ -171,7 +181,7 @@ git clone https://github.com/jtuttas/Softwareentwicklung_KI
 
 # Prompt
 
-Starten Sie den Github Copilot via *copilot* und nutzen Sie folgenden Prompt:
+Starten Sie den Github Copilot via **copilot** und nutzen Sie folgenden Prompt:
 
 ```txt
 Erstelle mir die Anwendung wie in den Anforderungen beschrieben
